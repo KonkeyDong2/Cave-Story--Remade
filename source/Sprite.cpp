@@ -25,10 +25,7 @@ Sprite::Sprite(const char* targetFile) {
 
 	this->sourceX = this->sourceY = 0;
 
-	int width, height;
-	SDL_QueryTexture(this->targetTexture->SDLTexture, nullptr, nullptr, &width, &height);
-	this->width = width;
-	this->height = height;
+	SDL_QueryTexture(this->targetTexture->SDLTexture, nullptr, nullptr, (int*)&this->width, (int*)&this->height);
 
 	this->origin = new Vector2D(0, 0);
 }
@@ -40,10 +37,7 @@ Sprite::Sprite(const char* targetFile, const Vector2D& origin) {
 
 	this->sourceX = this->sourceY = 0;
 
-	int width, height;
-	SDL_QueryTexture(this->targetTexture->SDLTexture, nullptr, nullptr, &width, &height);
-	this->width = width;
-	this->height = height;
+	SDL_QueryTexture(this->targetTexture->SDLTexture, nullptr, nullptr, (int*)&this->width, (int*)&this->height);
 
 	this->origin = new Vector2D(origin);
 }

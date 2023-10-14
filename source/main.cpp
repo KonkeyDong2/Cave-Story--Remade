@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
 
 	gameManager->Initialize("Cave Story -Remade", 640, 480);
 
-	Sprite test("sprites/spr_player_default-Sheet.png");
+	Sprite test("sprites/spr_player_default-Sheet.png",Vector2D(1,1));
 
 	while (!gameManager->IsQuitting()){
 		gameManager->Handle();
